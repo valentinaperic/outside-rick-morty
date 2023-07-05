@@ -37,8 +37,8 @@ const Body: React.FC = () => {
   const handleNameInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.target.value;
 
-    //remove numeric characters
-    const filteredValue = inputValue.replace(/[0-9]/g, '');
+    //remove numeric characters and special characters 
+    const filteredValue = inputValue.replace(/[^a-zA-Z\s]/g, '');
     setName(filteredValue);
   };
 
